@@ -2,7 +2,7 @@
 
 One unified AI platform combining real-time navigation assistance for the visually impaired with live human performance coaching.
 
-![ARIA Platform](https://via.placeholder.com/1200x600/020609/00e5ff?text=ARIA+Platform)
+![ARIA Platform](https://aria-frontend-two.vercel.app/)
 
 ## Features
 
