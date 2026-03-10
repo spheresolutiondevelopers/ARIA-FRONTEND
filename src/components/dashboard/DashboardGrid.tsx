@@ -7,11 +7,17 @@ import { Sparkline } from './Sparkline';
 import { BarChart } from './BarChart';
 import { FillerWordsList } from './FillerWordsList';
 import { NavigationStats } from './NavigationStats';
+import { SystemStatusBar } from './SystemStatusBar';
+import { UserLocationMap } from './UserLocationMap';
 import { Tag } from '@/components/ui/Tag';
 
 export const DashboardGrid: React.FC = () => {
   return (
     <section className="bg-bg-deep border-t border-border px-4 md:px-8 py-12 md:py-16">
+      {/* ── System status bar ── */}
+      <SystemStatusBar />
+
+      {/* ── Section header ── */}
       <div className="mb-8 md:mb-10">
         <div className="section-label">Analytics</div>
         <h2 className="section-title">
@@ -78,7 +84,19 @@ export const DashboardGrid: React.FC = () => {
           </div>
           <NavigationStats />
         </ChartCard>
+
+        {/* User Location Map */}
+        <ChartCard wide className="lg:col-span-2">
+          <div className="flex items-center justify-between mb-4">
+            <div>
+              <div className="chart-title">Current Location</div>
+              <div className="chart-subtitle">Live · Device GPS</div>
+            </div>
+            <Tag color="cyan">Maps</Tag>
+          </div>
+          <UserLocationMap />
+        </ChartCard>
       </div>
     </section>
   );
-}; 
+};
